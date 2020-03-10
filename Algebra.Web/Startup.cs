@@ -37,6 +37,7 @@ namespace Algebra.Web
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
             });
 
+            services.AddTransient<ICalculator, SimpleCalculator>();
             services.AddComputationServices();
         }
 
